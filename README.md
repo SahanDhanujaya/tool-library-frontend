@@ -34,6 +34,7 @@ The application will be available at http://localhost:5173.
 * **Icons:** [e.g., Lucide React / FontAwesome]
 * **State Management:** [e.g., Context API / Redux Toolkit]
 
+---
 ## ✨ Features
 
 * **Tool Catalog:** Browse available tools with detailed descriptions.
