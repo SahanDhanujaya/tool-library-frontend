@@ -1,24 +1,32 @@
-🛠️ Tool Library Frontend
-ECA Final Project
+# 🛠️ Tool Library Frontend
+## ECA Final Project
 
 A modern, responsive web application built with React and Vite that serves as a digital catalog for a tool-sharing library. This interface allows users to browse, search, and manage tool inventories efficiently.
 
-🚀 Quick Start
+---
+
+## 🚀 Quick Start
 To get this project running locally on your machine, follow these steps:
 
-1. Clone the repository
-Bash
+## 1. Clone the repository
+
+```bash
 git clone https://github.com/SahanDhanujaya/tool-library-frontend.git
 cd tool-library-frontend
-2. Install dependencies
-Bash
+```
+
+## 2. Install dependencies
+```bash
 npm install
-3. Start the development server
-Bash
+```
+
+## 3. Start the development server
+```bash
 npm run dev
 The application will be available at http://localhost:5173.
+```
 
-💻 Tech Stack
+## 💻 Tech Stack
 Framework: React (Functional Components & Hooks)
 
 Build Tool: Vite (for fast HMR and optimized builds)
@@ -38,7 +46,7 @@ Responsive Design: Fully optimized for mobile, tablet, and desktop views.
 
 Interactive UI: Modern user experience with smooth transitions and real-time updates.
 
-📁 Project Structure
+## 📁 Project Structure
 Plaintext
 src/
 ├── assets/        # Images, fonts, and static files
@@ -47,7 +55,8 @@ src/
 ├── hooks/         # Custom React hooks
 ├── services/      # API calls and external integrations
 └── App.jsx        # Main application entry point
-🛠️ Available Scripts
+
+## 🛠️ Available Scripts
 npm run dev: Starts the development server.
 
 npm run build: Bundles the app into static files for production.
