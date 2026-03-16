@@ -25,7 +25,7 @@ npm install
 npm run dev
 The application will be available at http://localhost:5173.
 ```
-
+---
 ## 💻 Tech Stack
 
 * **Framework:** React (Functional Components & Hooks)
@@ -41,6 +41,7 @@ The application will be available at http://localhost:5173.
 * **Responsive Design:** Fully optimized for mobile, tablet, and desktop views.
 * **Interactive UI:** Modern user experience with smooth transitions and real-time updates.
 
+---
 ## 📁 Project Structure
 
 ``` bash
@@ -52,6 +53,8 @@ src/
 ├── services/      # API calls and external integrations
 └── App.jsx        # Main application entry point
 ```
+
+---
 ## 🛠️ Available Scripts
 
 * npm run dev: Starts the development server.
