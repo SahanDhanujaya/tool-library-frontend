@@ -27,27 +27,23 @@ The application will be available at http://localhost:5173.
 ```
 
 ## 💻 Tech Stack
-Framework: React (Functional Components & Hooks)
 
-Build Tool: Vite (for fast HMR and optimized builds)
+* **Framework:** React (Functional Components & Hooks)
+* **Build Tool:** Vite (for fast HMR and optimized builds)
+* **Styling:** [Add your CSS framework here, e.g., Tailwind CSS / Material UI / CSS Modules]
+* **Icons:** [e.g., Lucide React / FontAwesome]
+* **State Management:** [e.g., Context API / Redux Toolkit]
 
-Styling: [Add your CSS framework here, e.g., Tailwind CSS / Material UI / CSS Modules]
+## ✨ Features
 
-Icons: [e.g., Lucide React / FontAwesome]
-
-State Management: [e.g., Context API / Redux Toolkit]
-
-✨ Features
-Tool Catalog: Browse available tools with detailed descriptions.
-
-Search & Filter: Quickly find specific tools by category or name.
-
-Responsive Design: Fully optimized for mobile, tablet, and desktop views.
-
-Interactive UI: Modern user experience with smooth transitions and real-time updates.
+* **Tool Catalog:** Browse available tools with detailed descriptions.
+* **Search & Filter:** Quickly find specific tools by category or name.
+* **Responsive Design:** Fully optimized for mobile, tablet, and desktop views.
+* **Interactive UI:** Modern user experience with smooth transitions and real-time updates.
 
 ## 📁 Project Structure
-Plaintext
+
+``` bash
 src/
 ├── assets/        # Images, fonts, and static files
 ├── components/    # Reusable UI components (Buttons, Cards, Modals)
@@ -55,10 +51,9 @@ src/
 ├── hooks/         # Custom React hooks
 ├── services/      # API calls and external integrations
 └── App.jsx        # Main application entry point
-
+```
 ## 🛠️ Available Scripts
-npm run dev: Starts the development server.
 
-npm run build: Bundles the app into static files for production.
-
-npm run preview: Locally previews the production build.
+* npm run dev: Starts the development server.
+* npm run build: Bundles the app into static files for production.
+* npm run preview: Locally previews the production build.
