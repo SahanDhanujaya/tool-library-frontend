@@ -1,22 +1,39 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import React, { useState } from 'react';
-import { Box, Lock, Mail, ArrowRight } from 'lucide-react';
+import { Box, Lock, Mail, ArrowRight, Loader } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigation = useNavigate();
-  const {isAuthenticated, login} = useAuth();
+  const {isAuthenticated, login, saveUser} = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const BASE_URL = import.meta.env.VITE_BASE_URL; 
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
     console.log("Logging in with:", { email, password });
-    login();
-    isAuthenticated ? navigation('/tools') : navigation('/auth/login');
+    const payload = {
+      email,
+      password
+    }
+    const response = await axios.post(`${BASE_URL}/api/v1/users/login`, payload);
+    if (response.status === 200) {
+      login();
+      saveUser(response.data?.user || null);
+      localStorage.setItem('user', JSON.stringify(response.data?.user || null));
+      toast.success("Logged in successfully!");
+    } else {
+      toast.error("Login failed. Please check your credentials.");
+    }
     
-    // Connect to your User Service here
+    setIsLoading(false);
+    isAuthenticated ? navigation('/tools') : navigation('/auth/login');
   };
 
   return (
@@ -77,7 +94,11 @@ const LoginPage = () => {
             type="submit"
             className="w-full flex items-center justify-center space-x-2 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md shadow-blue-200 transition-all active:scale-[0.98]"
           >
-            <span>Sign In</span>
+            <span>
+              {
+                isLoading ? <Loader className="w-4 h-4 animate-spin" /> : "Login"
+              }
+            </span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </form>

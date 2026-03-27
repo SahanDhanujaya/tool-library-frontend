@@ -1,13 +1,13 @@
 import type { User } from "./user";
 
-interface Requirement {
+export interface Requirement {
     verify: "",
     score: "",
     knowledge: ""
 }
 
 export type Tool = {
-    id: number;
+    id?: number;
     owner: User;
     title: string;
     description: string;

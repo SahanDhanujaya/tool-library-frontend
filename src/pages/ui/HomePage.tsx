@@ -1,12 +1,14 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { 
   MapPin, ShieldCheck, Users, 
   ArrowRight, Share2, Search, Zap 
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ContactPage from './ContactPage';
 
 const HomePage = () => {
+  const loggedInUser = localStorage.getItem('user');
+  const navigate = useNavigate();
   // 1. Create a Ref for the How It Works section
   const howItWorksRef = useRef<HTMLDivElement>(null);
 
@@ -17,6 +19,12 @@ const HomePage = () => {
       block: 'start' 
     });
   };
+
+  useEffect(()=>{
+    if (loggedInUser) {
+      navigate('/tools');
+    }
+  })
 
   return (
     <div className="min-h-screen bg-white">

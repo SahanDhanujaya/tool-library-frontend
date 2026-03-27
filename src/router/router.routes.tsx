@@ -7,6 +7,7 @@ import ToolMarketplace from "../pages/ui/ToolMarketPlace";
 import BorrowToolPage from "../pages/ui/BorrowToolPage";
 import UserSettings from "../pages/ui/UserSettings";
 import ListATool from "../pages/ui/ListATool";
+import EditTool from "../pages/ui/EditTool";
 
 export const router = createBrowserRouter([
     {
@@ -30,8 +31,12 @@ export const router = createBrowserRouter([
                 element: <UserSettings />
             },
             {
-                path: "list",
+                path: "list-tool",
                 element: <ListATool />
+            },
+            {
+                path: "edit-tool/:id",
+                element: <EditTool />
             }
         ],
     },
